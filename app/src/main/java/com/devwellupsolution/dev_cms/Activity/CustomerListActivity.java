@@ -137,7 +137,6 @@ public class CustomerListActivity extends AppCompatActivity implements FetchCust
                     Log.i(TAG, "parseCustomerDetailsJSON: No such record found");
                 }
 
-
             } else {
                 Toast.makeText(this, "JSON response is empty", Toast.LENGTH_SHORT).show();
             }

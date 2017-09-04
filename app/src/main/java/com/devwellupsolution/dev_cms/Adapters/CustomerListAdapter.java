@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -22,8 +23,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.devwellupsolution.dev_cms.Activity.CustomerListActivity;
+import com.devwellupsolution.dev_cms.Activity.CustomerListDetailsActivity;
 import com.devwellupsolution.dev_cms.Model.Customer;
 import com.devwellupsolution.dev_cms.R;
+import com.devwellupsolution.dev_cms.Utilities.Utility;
 
 import java.util.ArrayList;
 
@@ -36,6 +39,7 @@ public class CustomerListAdapter extends BaseAdapter implements View.OnClickList
     private static final String TAG = "CustomerListAdapter";
     private ArrayList<Customer> customerArrayList;
     private Context context;
+    Customer customer;
     private int PERMSISSION_REQUEST_CALL_CONST = 100;
 
     public CustomerListAdapter(Context context, ArrayList<Customer> customerArrayList) {
@@ -70,12 +74,12 @@ public class CustomerListAdapter extends BaseAdapter implements View.OnClickList
         if (convertView == null) {
             vi = inflater.inflate(R.layout.customer_listview, null);
         }
+
         TextView name = vi.findViewById(R.id.tv_CustomerName_CustomerListView);
         TextView phone = vi.findViewById(R.id.tv_PhoneNumber_CustomerListView);
         ImageButton call = vi.findViewById(R.id.ib_Call_CustomerListView);
         ImageButton message = vi.findViewById(R.id.ib_Message_CustomerListView);
         Customer customer = customerArrayList.get(position);
-
 
         name.setText(customer.getName());
         phone.setText(customer.getPhone());
@@ -84,13 +88,34 @@ public class CustomerListAdapter extends BaseAdapter implements View.OnClickList
 
         call.setOnClickListener(this);
         message.setOnClickListener(this);
+        name.setOnClickListener(this);
+        phone.setOnClickListener(this);
 
         return vi;
     }
 
     @Override
     public void onClick(final View view) {
+
         switch (view.getId()) {
+            case R.id.tv_CustomerName_CustomerListView:
+               /* customer = customerArrayList.get();
+                Log.i(TAG, "onItemClick: phone Number:  " + (view.findViewById(R.id.tv_PhoneNumber_CustomerListView)));
+                if(Utility.isNetworkAvailable(getApplication())) {
+                    Intent intent = new Intent(getApplicationContext(), CustomerListDetailsActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelable("customer", customer);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+
+                } else {
+                    Toast.makeText(getApplication(), "Network issue. Please switch on the internet.", Toast.LENGTH_SHORT).show();
+                }*/
+                break;
+
+            case R.id.tv_PhoneNumber_CustomerListView:
+                break;
+
             case R.id.ib_Call_CustomerListView:
                 final String callNumber = (String) view.findViewById(R.id.ib_Call_CustomerListView).getTag();
                 Log.i(TAG, "onClick: call: " + callNumber);
