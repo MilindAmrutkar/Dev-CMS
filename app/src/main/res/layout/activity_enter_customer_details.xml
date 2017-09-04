@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+
+    tools:context="com.devwellupsolution.dev_cms.Activity.EnterCustomerDetailsActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_PhoneNumber_EnterCustomerDetailsActivity"
+            style="@style/TextView"
+            android:hint="90xxxxxxxx"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:layout_weight="1.2"
+                android:text="Entry Date" />
+
+            <Button
+                android:id="@+id/btn_JoinDate_EnterCustomerDetailsActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="setDate"
+                android:text="Select Date"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_JoiningDate_EnterCustomerDetailsActivity"
+                style="@style/TextViewWidth0dp"
+                android:gravity="center_horizontal"
+                android:hint="Date" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_Name_EnterCustomerDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:hint="Name"/>
+
+        <EditText
+            android:id="@+id/et_EmailAddress_EnterCustomerDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:padding="2dp"
+                android:layout_weight="1"
+                android:text="Date of Birth" />
+
+            <Button
+                android:id="@+id/btn_DOB_EnterCustomerDetailsActivity"
+                android:onClick="setDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Select Date"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_DOB_EnterCustomerDetailsActivity"
+                style="@style/TextViewWidth0dp"
+                android:gravity="center_horizontal"
+                android:hint="Date" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cb_IsMarried_EnterCustomerDetailsActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp"
+            android:text="Married"/>
+
+        <LinearLayout
+            android:id="@+id/ll_Anniversary_EnterCustomerDetailsActivity"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewWidth0dp"
+                android:padding="2dp"
+                android:layout_weight="1"
+                android:text="Anniversary" />
+
+            <Button
+                android:id="@+id/btn_Anniversary_EnterCustomerDetailsActivity"
+                android:onClick="setDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Select Date"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_AnniversaryDate_EnterCustomerDetailsActivity"
+                style="@style/TextViewWidth0dp"
+                android:gravity="center_horizontal"
+                android:hint="Date" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_Address_EnterCustomerDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:hint="Address"
+            android:inputType="textCapSentences"
+            android:lines="4"
+            android:maxLines="4"
+            android:minLines="2" />
+
+        <EditText
+            android:id="@+id/et_City_EnterCustomerDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="City"
+            android:inputType="textCapCharacters"
+            />
+
+        <EditText
+            android:id="@+id/et_State_EnterCustomerDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="State"
+            android:inputType="textCapCharacters"/>
+
+        <EditText
+            android:id="@+id/et_Pincode_EnterCustomerDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pincode"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/et_PAN_EnterCustomerDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PAN"
+            android:inputType="textCapCharacters"/>
+
+        <EditText
+            android:id="@+id/et_AADHAAR_EnterCustomerDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="AADHAAR"
+            android:inputType="textCapCharacters"/>
+
+        <EditText
+            android:id="@+id/et_License_EnterCustomerDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Driving License Number"
+            android:inputType="textCapCharacters"/>
+
+        <EditText
+            android:id="@+id/et_Religion_EnterCustomerDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Religion"
+            android:inputType="textCapCharacters"/>
+
+        <EditText
+            android:id="@+id/et_Remarks_EnterCustomerDetailsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:hint="Remarks(if any)"
+            android:lines="4"
+            android:maxLines="4"
+            android:minLines="2" />
+
+        <Button
+            style="@style/Button"
+            android:onClick="onUpload"
+            android:text="Add customer"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

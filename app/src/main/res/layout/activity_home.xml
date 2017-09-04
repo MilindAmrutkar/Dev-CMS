@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.devwellupsolution.dev_cms.Activity.HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Headers"
+            android:text="Customers" />
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <LinearLayout
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="3dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewWidth0dp"
+                    android:text="Total Customers " />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:onClick="openCustomerList"
+                    android:text="0" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/green_button"
+                    android:drawableLeft="@drawable/ic_add"
+                    android:onClick="openAddCustomer"
+                    android:text="Register New Customer"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewWidth0dp"
+                    android:text="Birthdays Upcoming " />
+
+                <TextView
+                    style="@style/FieldTextViewWidth0dp"
+                    android:hint="0"
+                    android:onClick="" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    style="@style/TextViewWidth0dp"
+                    android:text="Anniversaries Upcoming " />
+
+                <TextView
+                    style="@style/FieldTextViewWidth0dp"
+                    android:hint="0"
+                    android:onClick="" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View style="@style/Horizontal_Ruler" />
+
+        <TextView
+            style="@style/SubHeaders"
+            android:text="Announcements" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_button"
+            android:drawableLeft="@drawable/ic_add"
+            android:onClick="openCreateAnnouncement"
+            android:text="Create a New Announcement"
+            android:textColor="@color/white" />
+
+        <TextView
+            style="@style/TextView"
+            android:text="Last Announcement will appear here" />
+
+        <View style="@style/Horizontal_Ruler" />
+    </LinearLayout>
+
+
+</ScrollView>

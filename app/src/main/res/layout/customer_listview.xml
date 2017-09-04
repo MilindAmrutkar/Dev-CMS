@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_PhoneNumber_CustomerListView"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="80dp"
+        android:hint="8080593361"
+        android:textColor="@color/darker_blue"
+        android:textColorHint="@color/darker_blue"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_CustomerName_CustomerListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/tv_PhoneNumber_CustomerListView"
+        android:hint="Srinivasa Venugopal Ramkrishna"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textColorHint="@color/red"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/ib_Call_CustomerListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_CustomerName_CustomerListView"
+        android:src="@mipmap/ic_call" />
+
+    <ImageButton
+        android:id="@+id/ib_Message_CustomerListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_message" />
+</RelativeLayout>
